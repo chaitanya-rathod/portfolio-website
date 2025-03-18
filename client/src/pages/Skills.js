@@ -18,7 +18,6 @@ import BuildIcon from '@mui/icons-material/Build';
 import SchoolIcon from '@mui/icons-material/School';
 import JavascriptIcon from '@mui/icons-material/Javascript';
 import HtmlIcon from '@mui/icons-material/Html';
-import CssIcon from '@mui/icons-material/Css';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import CloudIcon from '@mui/icons-material/Cloud';
 import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined';
@@ -225,7 +224,7 @@ const Skills = () => {
             Continuous Learning
           </Typography>
           <Typography variant="body1" paragraph align="center">
-          I’m continually expanding my skill set and staying current with emerging technologies and industry trends. At present, I’m focusing on deepening my expertise in cloud computing, artificial intelligence, and advanced simulation techniques for engineering applications.          </Typography>
+          I'm continually expanding my skill set and staying current with emerging technologies and industry trends. At present, I'm focusing on deepening my expertise in cloud computing, artificial intelligence, and advanced simulation techniques for engineering applications.          </Typography>
         </Box>
       </Container>
     </Box>
