@@ -42,11 +42,13 @@ const Navbar = () => {
   return (
     <AppBar 
       position="sticky" 
-      elevation={0}
+      elevation={4}
       sx={{
-        backgroundColor: 'rgba(44, 62, 80, 0.95)',
+        bgcolor: 'transparent',
+        background: 'linear-gradient(135deg, #232526 0%, #414345 100%)',
         backdropFilter: 'blur(8px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: '0 4px 24px rgba(44,62,80,0.15)',
+        transition: 'background 0.3s',
         py: isMobile ? 0.5 : 0,
       }}
     >

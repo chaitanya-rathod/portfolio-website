@@ -14,7 +14,8 @@ import {
   Card,
   CardContent,
   Avatar,
-  Divider
+  Divider,
+  IconButton
 } from '@mui/material';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import CodeIcon from '@mui/icons-material/Code';
@@ -22,6 +23,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import DownloadIcon from '@mui/icons-material/Download';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const Home = () => {
   const theme = useTheme();
@@ -35,23 +37,14 @@ const Home = () => {
   return (
     <Box component="main">
       {/* Hero Section */}
-      <Box 
-        sx={{ 
-          background: 'linear-gradient(135deg, #2c3e50 0%, #1a2530 100%)',
-          color: 'white',
-          py: isMobile ? 8 : 16,
+      <Box
+        sx={{
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
           position: 'relative',
-          overflow: 'hidden',
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 0%, transparent 40%)',
-            zIndex: 1,
-          },
+          background: 'linear-gradient(135deg, #232526 0%, #414345 100%)',
+          backgroundSize: '200% 200%',
         }}
       >
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
@@ -77,7 +70,7 @@ const Home = () => {
               <Typography 
                 variant="h5" 
                 paragraph
-                sx={{ mb: 4, opacity: 0.9, fontWeight: 300 }}
+                sx={{ mb: 4, opacity: 0.95, fontWeight: 300, color: '#fff' }}
               >
                 BTech student at Vishwakarma Institute of Technology, Pune
               </Typography>
@@ -103,27 +96,38 @@ const Home = () => {
                     fontWeight: 500, 
                     px: 3, 
                     py: 1.5,
-                    borderColor: 'rgba(255,255,255,0.3)',
+                    borderColor: 'rgba(255,255,255,0.9)',
+                    color: '#fff',
                     '&:hover': {
-                      borderColor: 'rgba(255,255,255,0.6)',
+                      borderColor: 'rgba(255,255,255,1)',
+                      background: 'rgba(255,255,255,0.08)',
+                      color: '#fff',
                     }
                   }}
                 >
                   Contact Me
                 </Button>
-                <Button 
-                  variant="text" 
-                  color="inherit" 
+                <Button
+                  variant="contained"
+                  color="secondary"
                   size="large"
                   startIcon={<DownloadIcon />}
                   href="/resume.pdf"
                   target="_blank"
-                  sx={{ 
-                    fontWeight: 500,
-                    color: 'rgba(255,255,255,0.8)',
+                  sx={{
+                    fontWeight: 700,
+                    color: '#fff',
+                    background: 'linear-gradient(90deg, #ff8a00 0%, #e52e71 100%)',
+                    boxShadow: '0 4px 20px rgba(229,46,113,0.2)',
+                    borderRadius: '30px',
+                    px: 4,
+                    py: 1.5,
+                    transition: 'transform 0.2s, box-shadow 0.2s',
                     '&:hover': {
-                      color: 'rgba(255,255,255,1)',
-                    }
+                      transform: 'scale(1.07)',
+                      boxShadow: '0 8px 32px rgba(229,46,113,0.25)',
+                      background: 'linear-gradient(90deg, #e52e71 0%, #ff8a00 100%)',
+                    },
                   }}
                 >
                   Resume
@@ -404,6 +408,23 @@ const Home = () => {
             </Button>
           </Box>
         </Container>
+      </Box>
+
+      {/* Scroll-to-top Button */}
+      <Box sx={{ position: 'fixed', bottom: 32, right: 32, zIndex: 1200 }}>
+        <IconButton
+          color="primary"
+          size="large"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          sx={{
+            bgcolor: 'rgba(44,62,80,0.8)',
+            color: '#fff',
+            boxShadow: '0 2px 8px rgba(44,62,80,0.2)',
+            '&:hover': { bgcolor: 'primary.main' },
+          }}
+        >
+          <KeyboardArrowUpIcon fontSize="inherit" />
+        </IconButton>
       </Box>
     </Box>
   );
