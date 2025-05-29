@@ -10,7 +10,6 @@ import {
   Stack,
   Chip,
   useTheme,
-  useMediaQuery,
   Card,
   CardContent,
   Avatar,
