@@ -27,7 +27,6 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const Home = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const skills = [
     'Java', 'Python', 'JavaScript', 'React', 'Node.js', 
